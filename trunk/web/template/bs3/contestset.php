@@ -25,7 +25,17 @@
     <?php include("template/$OJ_TEMPLATE/nav.php");?>	    
       <!-- Main component for a primary marketing message or call to action -->
       <div class="jumbotron">
-<center><form method=post action=contest.php >
+<center>
+
+<?php if (isset($_SESSION['user_id'])){
+
+}else{
+echo "<a class='btn btn-primary' href='http://116.62.117.127/loginpage.php'>请登录后继续操作</a>&nbsp;";
+return;
+}
+?>
+
+<form method=post action=contest.php >
 	<?php echo $MSG_SEARCH;?>
 	<input name=keyword type=text >
 	<input type=submit>

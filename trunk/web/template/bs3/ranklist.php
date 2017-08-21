@@ -25,6 +25,15 @@
     <?php include("template/$OJ_TEMPLATE/nav.php");?>	    
       <!-- Main component for a primary marketing message or call to action -->
       <div class="jumbotron">
+
+      <?php if (isset($_SESSION['user_id'])){
+
+              }else{
+              echo "<center><a class='btn btn-primary' href='http://116.62.117.127/loginpage.php'>请登录后继续操作</a>&nbsp;</center>";
+              return;
+              }
+      ?>
+
 	<table align=center width=90%>
 <thead>
 <tr><td colspan=3 align=left>

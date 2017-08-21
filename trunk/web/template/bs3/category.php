@@ -27,7 +27,13 @@
       <div class="jumbotron">
         <p>
 <center>
-	<?php echo $view_category?>
+	<?php if (isset($_SESSION['user_id'])){
+        echo $view_category;
+        }else{
+        echo "<a class='btn btn-primary' href='http://116.62.117.127/loginpage.php'>请登录后继续操作</a>&nbsp;";
+        return;
+        }
+	?>
 </center>
         </p>
       </div>

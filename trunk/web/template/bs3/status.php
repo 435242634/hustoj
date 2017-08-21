@@ -26,7 +26,12 @@
       <!-- Main component for a primary marketing message or call to action -->
       <div class="jumbotron">
 <div align=center class="input-append">
-<?php
+<?php if (isset($_SESSION['user_id'])){
+
+}else{
+echo "<a class='btn btn-primary' href='http://116.62.117.127/loginpage.php'>请登录后继续操作</a>&nbsp;";
+return;
+}
 ?>
 <form id=simform class=form-inline action="status.php" method="get">
 <?php echo $MSG_PROBLEM_ID?>:<input class="form-control" type=text size=4 name=problem_id value='<?php echo  htmlspecialchars($problem_id, ENT_QUOTES) ?>'>

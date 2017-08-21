@@ -71,10 +71,10 @@ if(isset($_GET['search'])&&trim($_GET['search'])!=""){
     $pend=100;
 
 }else{
-     $filter_sql="  `problem_id`>='".strval($pstart)."' AND `problem_id`<'".strval($pend)."' ";
+     $filter_sql="  1=1 ";
 }
 
-if (isset($_SESSION['administrator'])){
+if (isset($_SESSION['user_id'])){
 	
 	$sql="SELECT `problem_id`,`title`,`source`,`submit`,`accepted` FROM `problem` WHERE $filter_sql ";
 	
