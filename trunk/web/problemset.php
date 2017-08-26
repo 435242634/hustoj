@@ -8,7 +8,7 @@
 $first=1000;
   //if($OJ_SAE) $first=1;
 $sql="select max(`problem_id`) as upid FROM `problem`";
-$page_cnt=100;
+$page_cnt=50;
 $result=pdo_query($sql);
 $row=$result[0];
 $cnt=$row['upid']-$first;
@@ -71,7 +71,8 @@ if(isset($_GET['search'])&&trim($_GET['search'])!=""){
     $pend=100;
 
 }else{
-     $filter_sql="  1=1 ";
+     //$filter_sql="  1=1 ";
+	   $filter_sql="  `problem_id`>='".strval($pstart)."' AND `problem_id`<'".strval($pend)."' ";
 }
 
 if (isset($_SESSION['user_id'])){
