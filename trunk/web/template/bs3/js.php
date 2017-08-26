@@ -23,9 +23,12 @@ $(document).ready(function(){
   $(".jumbotron").prepend(msg);
   $("form").append("<div id='csrf' />");
   $("#csrf").load("<?php echo $path_fix?>csrf.php");
-  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
-  $("body").append("<div class=center ><a href='https://www.duba.com/?un_454974_116387' title='每天点击一次开发者可获得￥0.06' target='_blank'>捐助系统开发者</a></div>");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by HUSTOJ "+(new Date()).getFullYear()+" </div>");
+  //$("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+  //$("body").append("<div class=center ><a href='https://www.duba.com/?un_454974_116387' title='每天点击一次开发者可获得￥0.06' target='_blank'>捐助系统开发者</a></div>");
 });
+  console.log("If you want to change the appearance of the web pages, make a copy of bs3 under template directory.\nRename it to whatever you like, and change the $OJ_TEMPLATE value in db_info.inc.php\nAfter that modify files under your own directory .\n");
+
 
 </script>
 
